@@ -17,7 +17,7 @@ const fetchAllApi = async (endpoint) => {
                 if (movie === null) {
                     filmsApi.push({
                         title: Title,
-                        state: "disponible",
+                        state: "Disponible",
                         category: endpoint,
                         year: Year,
                         picture: Poster,

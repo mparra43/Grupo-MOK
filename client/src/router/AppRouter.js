@@ -7,6 +7,7 @@ import {
 
 import {useDispatch, useSelector} from 'react-redux';
 import {Home} from '../components/home/Home';
+import {Dashboard} from '../components/header/Dashboard';
 import {ListFilms} from '../components/films/ListFilms';
 import {LoginScreen} from '../components/auth/LoginScreen';
 import {MainScreen} from '../components/mainScreen/MainScreen';
@@ -43,7 +44,13 @@ export const AppRouter = () => {
                         isAuthenticated={!!id}
 
                     />
+                    <PublicRoute
+                        exact
+                        path="/dashboard"
+                        component={Dashboard}
+                        isAuthenticated={!!id}
 
+                    />
                     <PublicRoute
                         exact
                         path="/category/:category"

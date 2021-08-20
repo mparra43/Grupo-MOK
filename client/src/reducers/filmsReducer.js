@@ -5,6 +5,7 @@ const initialState = {
     listMovies: [],
     rentMovies: [],
     Rent: [],
+    dashboard:{},
 }
 
 export const filmsReducer = (state = initialState, action) => {
@@ -12,9 +13,11 @@ export const filmsReducer = (state = initialState, action) => {
 
     switch (action.type) {
         case types.getFilmAll:
+            console.log(action.payload)
             return {
                 ...state,
-                movies: action.payload,
+                movies: action.payload.filmsAll,
+                dashboard: action.payload.stateFilm
             }
 
         case types.findFilms:

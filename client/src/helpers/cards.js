@@ -29,20 +29,30 @@ const cards = [
 
 
 const cardsAll = async () => {
+    let dashboardFilm =[];
     let filmsAll = [];
+    let stateFilm={
+        rented:[],
+        available: [],
+    }
     try {
         for (let i = 0; i < cards.length; i++) {
             let {name, img} = cards[i];
             const resp = await fetchSinToken(`films/category?category=${name}`);
             const data = await resp.json();
-            console.log(data)
             filmsAll.push({
                 name,
                 img,
                 data: data
             })
+            dashboardFilm = dashboardFilm.concat(data);
         }
-        return filmsAll;
+        stateFilm.rented= dashboardFilm.filter((e)=> e.state ==="Alquilada")
+        stateFilm.available= dashboardFilm.filter((e)=> e.state ==="Disponible")
+        return {
+            filmsAll,
+            stateFilm,
+        };
     } catch (e) {
         console.log(e)
     }
