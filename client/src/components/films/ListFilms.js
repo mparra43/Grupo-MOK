@@ -34,7 +34,7 @@ export const ListFilms = () => {
                         <td>{e.title}</td>
                         <td>{e.year}</td>
                         <td>US ${5}</td>
-                        {e.state === "disponible" ? <td>
+                        {e.state === "Disponible" ? <td>
                             <button className="btn-state" onClick={() => {handleStateFilms(e)}}>{e.state}</button>
                         </td> : <td>{e.state}</td>}
                     </tr>

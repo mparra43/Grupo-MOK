@@ -1,15 +1,16 @@
 import React from 'react'
 import {useSelector} from "react-redux";
+import './styles/dashboard.css'
 
 export const Dashboard= () => {
 
     const {dashboard} = useSelector(state => state.films);
 
     return (
-        <div className="list">
+        <div className="list-dash">
             <h1>Dashboard</h1>
             <hr/>
-            <table className="table">
+            <table className="table-dash">
                 <tr>
                     <th>película</th>
                     <th>Alquiladas</th>
