@@ -1,0 +1,30 @@
+.table-rent {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+    margin-left: 25px;
+}
+.table-rent td, .table-rent th {
+    border: 1px solid #ddd;
+    padding: 2px;
+}
+.table-rent tr:nth-child(even){background-color: #f2f2f2;}
+
+.table-rent tr:hover {background-color: #ddd;}
+
+.table-rent th {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+    background-color:#2F3031;
+    color: white;
+}
+
+.btn-m button {
+    margin: 20px 0 15px 240px;
+    background-color: #3498DB;
+    border-color: transparent;
+    align-items: center;
+    border-radius: 6px;
+    padding:5px;
+}

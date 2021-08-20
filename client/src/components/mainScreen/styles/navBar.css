@@ -1,0 +1,25 @@
+.nav-bar{
+    justify-content: space-between;
+    width: 100%;
+    height:50px;
+    background-color: #E74C3C;
+}
+
+
+.name{
+    color: #272829;
+    margin-left:60px;
+    font-size: 17px;
+}
+.btn-salir{
+    margin-top: 10px;
+    margin-left:80%;
+    border-radius: 1rem;
+    padding: 10px 40px;
+    border: none;
+    cursor: pointer;
+
+}
+.btn-salir:hover{
+    opacity: 0.9;
+}
